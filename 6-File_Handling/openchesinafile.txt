@@ -1,0 +1,1 @@
+this is the second method of input using flush and close
