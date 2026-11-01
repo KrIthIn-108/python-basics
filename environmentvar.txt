@@ -1,0 +1,44 @@
+creating a virtual environment using terminal/command prompt:
+
+conda create (-p/-n) {virtual_enve_name} python=={version_name} -y
+
+-p: to create a virtual environment in present working directory like current path
+-n: to create a virtual environment is created in the default path were anaconda is installed, like a new directory.
+
+example: conda create -p venv python==3.12
+
+ACTIVATING environment: conda activate {virtual_enve_name}/
+
+virtual environment: to manage packages for different projects and versions.
+
+Installing packages:
+1. pip install method: eg: [pip install numpy]
+2. By using Requirements.txt file: list all the python packages name
+
+to use this: pip install -r requirments.txt -----> installs all the packages listed in the file; -r is to requirement 
+
+**benefits** of adding python or conda to environmentpath or path variables:
+So, when environment variables are enabled during installation, helpful 'notices' 
+are created on the computer's information board. 
+This helps the computer locate and run Python and Anaconda correctly, making programming easier.
+
+
+***NEVER CREATE ipybn FILE INSIDE VIRTUAL ENVE****
+
+
+
+Utilizing UV package manager as a saviour for the latest trend as uv is built on top of rust so its freaking fast.
+
+you can visit and download the package from the official page here are the tips to utilize this on our working project directory
+
+1. To initialize un package manager we can write : un init
+
+dude! this initialize's most of the important files as a skeleton requirement for out project.
+
+2. to initiate a virtual environments we can use : uv venv {ur virtual enve name}, can use uv venv so the default name is given by {venv}
+
+3. so we have to add a requirements.txt file that is literally saviour again to manage our dependencies for project though uv package manager adds the pyproject.toml and some other packages managing files this is quite interesting to be managed.
+
+to install the dependencies from the requirements.txt : uv add -r requirements.txt
+
+and yeah just in case you forgot some requirements and wants to add them in virtual environment container we can use we can use this command and directly install the required dependencies : uv add {dependency name}
